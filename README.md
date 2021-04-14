@@ -2,7 +2,7 @@
 
 This plugin will play an audible notification when a new chat message arrives, or any new task arrives.
 
-There are some caveats that the browser enforces - like requiring the user to interact with the Flex UI first (i.e. it'll block sounds being output by tabs that haven't received any user input). https://www.twilio.com/docs/flex/developer/ui/sound-and-audio#troubleshooting
+For more detail on the Flex SDK that enables this, see [Flex Sound & Audio](https://www.twilio.com/docs/flex/developer/ui/sound-and-audio) and [AudioPlayerManager API](https://assets.flex.twilio.com/docs/releases/flex-ui/1.25.0/AudioPlayerManager.html)
 
 Twilio Flex Plugins allow you to customize the appearance and behavior of [Twilio Flex](https://www.twilio.com/flex). If you want to learn more about the capabilities and how to use the API, check out our [Flex documentation](https://www.twilio.com/docs/flex).
 
@@ -85,7 +85,7 @@ npm run deploy --public
 
 9. Open the `.env` file in a text editor of your choice. Modify the `REACT_APP_SERVICE_BASE_URL` property to the Domain name you copied previously. Make sure to prefix it with "https://".
 
-11. Run `twilio flex:plugins:deploy`
+11. Run `twilio flex:plugins:deploy` from the root directory
 
 For more details on deploying your plugin, refer to the [deploying your plugin guide](https://www.twilio.com/docs/flex/plugins#deploying-your-plugin).
 
