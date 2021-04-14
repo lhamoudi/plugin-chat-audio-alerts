@@ -1,9 +1,5 @@
-import React from "react";
-import { VERSION } from "@twilio/flex-ui";
-import { FlexPlugin } from "flex-plugin";
 
-import CustomTaskListContainer from "./components/CustomTaskList/CustomTaskList.Container";
-import reducers, { namespace } from "./states";
+import { FlexPlugin } from "flex-plugin";
 
 const PLUGIN_NAME = "ChatAudioAlertsPlugin";
 
@@ -20,7 +16,6 @@ export default class ChatAudioAlertsPlugin extends FlexPlugin {
    * @param manager { import('@twilio/flex-ui').Manager }
    */
   init(flex, manager) {
-    this.registerReducers(manager);
 
     const { REACT_APP_SERVICE_BASE_URL } = process.env;
 
@@ -57,20 +52,4 @@ export default class ChatAudioAlertsPlugin extends FlexPlugin {
     });
   }
 
-  /**
-   * Registers the plugin reducers
-   *
-   * @param manager { Flex.Manager }
-   */
-  registerReducers(manager) {
-    if (!manager.store.addReducer) {
-      // eslint: disable-next-line
-      console.error(
-        `You need FlexUI > 1.9.0 to use built-in redux; you are currently on ${VERSION}`
-      );
-      return;
-    }
-
-    manager.store.addReducer(namespace, reducers);
-  }
 }
