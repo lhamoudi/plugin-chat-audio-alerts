@@ -1,0 +1,13 @@
+[
+  {
+    "name": "plugin-chat-audio-alerts",
+    "version": "0.0.0",
+    "class": "ChatAudioAlertsPlugin",
+    "requires": [
+      {
+        "@twilio/flex-ui": "^1"
+      }
+    ],
+    "src": "http://localhost:3000/plugin-chat-audio-alerts.js"
+  }
+]
